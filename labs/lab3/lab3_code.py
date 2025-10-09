@@ -50,10 +50,7 @@ print("Результат:", result)
 ##задание 8
 while True:
     x = input("Введите два числа через пробел: ")
-    
     a, b = x.split()
-    
-
     s = int(a) + int(b)
     
     print(f"Сумма равна: {s}")
