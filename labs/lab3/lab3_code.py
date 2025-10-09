@@ -37,7 +37,6 @@ while a <= limit:
     a = x
 
 #задание 7
-
 original = input("Введите строку: ")
 result = ""
 for i in range(len(original)):
