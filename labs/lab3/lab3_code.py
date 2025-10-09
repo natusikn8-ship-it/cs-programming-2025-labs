@@ -18,9 +18,9 @@ x = int(input("введите число:"))
 i = 1
 for y in range (1, x+1):
     i = i * y
-    
 print (f"факториал числа {x} равен {i} ")
-#задание 5
+
+#Задание 5
 count = 20
 while count >= 0:
     print(count)
@@ -40,11 +40,9 @@ while a <= limit:
 
 original = input("Введите строку: ")
 result = ""
-
 for i in range(len(original)):
     ch = original[i]
     result += ch + str(i + 1)
-
 print("Результат:", result) 
 
 ##задание 8
@@ -52,7 +50,6 @@ while True:
     x = input("Введите два числа через пробел: ")
     a, b = x.split()
     s = int(a) + int(b)
-    
     print(f"Сумма равна: {s}")
     print ()
     
