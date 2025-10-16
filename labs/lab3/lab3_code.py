@@ -24,7 +24,7 @@ print (f"факториал числа {x} равен {i} ")
 count = 20
 while count >= 0:
     print(count)
-    count -= 1  # уменьшаем на 1
+    count -= 1 
 
 #задание 6
 limit = int(input("Введите число: "))
