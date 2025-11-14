@@ -91,7 +91,7 @@ elif summa <= 10000:
     sale = 10
 else:
     sale = 15
-y = summa - sale / 100
+y = summa - ( summa * sale / 100 )
 print(f"Ваша скидка: {sale}%")
 print(f"К оплате: {y} руб.")
 
@@ -111,7 +111,7 @@ else:
 #Задание 10
 n = int(input("Введите число: "))
 if n < 2:
-    print(f"{n} - составное число")
+    print(f"{n} - простое число")
 else:
     i = 2
     while i < n:
