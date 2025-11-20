@@ -16,25 +16,25 @@ print(maximum / long)
 
 # Задание 4
 numbers = (True, 2, "hello", 1.34)
-if not all(isinstance(x, (int, float)) for x in numbers):
+if not all(isinstance(x, (int, float)) for x in numbers): # Проверяет тип переменных
     print(numbers)
 else:
     print(tuple(sorted(numbers)))
 
 # Задание 5
 prices = {"яблоко": 100, "банан": 80, "груша": 120}
-cheapest = min(prices, key=prices.get)
+cheapest = min(prices, key=prices.get) # Получает значение по ключу
 print("Самый дешевый товар:", cheapest)
 
 # Задание 6
 list = [1, "hello", 3.14, True, (1, 2)]
-result = dict(zip(list, list))
+result = dict(zip(list, list)) 
 print(result)
 
 # Задание 7
 prices = {"apple": "яблоко", "pear": "груша", "banana": "банан"}
 word = input("Введите русское слово: ")
-translation = {value: key for key, value in prices.items()}
+translation = {value: key for key, value in prices.items()} # Возвращает к виду ключ-значение
 print(translation.get(word, "Перевод не найден"))
 
 # Задание 8
@@ -62,11 +62,11 @@ else:
 fruits = ["яблоко", "груша", "банан", "киви", "апельсин", "ананас"]
 result = { }
 for fruit in fruits:
-    result.setdefault(fruit[0], [ ]).append(fruit)
+    result.setdefault(fruit[0], [ ]).append(fruit) # проверяется есть ли уже ключ в списке, добавляет переменную
 print(result)
 
 # Задание 10
 students = [("Анна", [5, 4, 5]), ("Иван", [3, 4, 4]), ("Мария", [5, 5, 5])]
 grades = {name: sum(grades)/len(grades) for name, grades in students}
-first = max(grades.items(), key=lambda x: x[1])
+first = max(grades.items(), key=lambda x: x[1]) # создание функции без имени
 print(f"{first[0]} имеет наивысший средний балл: {first[1]}")
