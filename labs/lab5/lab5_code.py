@@ -1,12 +1,12 @@
 # Задание 1
-numbers = [5, 2, 8, 3, 1, 9, 4, 7, 6, 10]
-numbers[3] = 30
+numbers = [5, 8, 1, 10, 9, 2, 7, 4, 6, 3]
+numbers[numbers.index(3)] = 30
 print(numbers)
 
 # Задание 2
 numbers = [1, 2, 3, 4, 5]
 squares = [x**2 for x in numbers]
-print(squares)  
+print(squares) 
 
 # Задание 3
 numbers = [5, 1, 3, 4, 2]
