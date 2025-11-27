@@ -10,9 +10,7 @@ print(squares)
 
 # Задание 3
 numbers = [5, 1, 3, 4, 2]
-maximum = max(numbers)
-long = len(numbers)
-print(maximum / long)
+print(max(numbers)/len(numbers))
 
 # Задание 4
 numbers = (True, 2, "hello", 1.34)
@@ -68,5 +66,5 @@ print(result)
 # Задание 10
 students = [("Анна", [5, 4, 5]), ("Иван", [3, 4, 4]), ("Мария", [5, 5, 5])]
 grades = {name: sum(grades)/len(grades) for name, grades in students}
-first = max(grades.items(), key=lambda x: x[1]) # создание функции без имени
-print(f"{first[0]} имеет наивысший средний балл: {first[1]}")
+first = max(grades, key=grades.get)
+print(f"{first} имеет наивысший средний балл: {grades[first]}")
