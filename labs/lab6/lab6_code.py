@@ -55,6 +55,16 @@ print(f"{third}")
 
 #Задание 4
 
+n = int(input())
+first = [list(map(int, input().split())) for x in range(n)]
+second = [list(map(int, input().split())) for x in range(n)]
+if any(len(row) != n for row in first + second):
+    print("Error!")
+else:
+    for i in range(n):
+        for j in range(n):
+            print(first[i][j] + second[i][j], end=" ")
+        print()
 
 
 #Задание 5
