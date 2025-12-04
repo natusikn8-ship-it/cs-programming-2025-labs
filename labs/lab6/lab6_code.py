@@ -55,16 +55,23 @@ print(f"{third}")
 
 #Задание 4
 
+def matrix(n):
+    return [list(map(int, input().split())) for _ in range(n)]
+def summa(x, y, z):
+    for i in range(n):
+        for j in range(n):
+            print(x[i][j] + y[i][j], end=" ")
+        print()
 n = int(input())
-first = [list(map(int, input().split())) for x in range(n)]
-second = [list(map(int, input().split())) for x in range(n)]
+first = matrix(n)
+second = matrix(n)
 if any(len(row) != n for row in first + second):
     print("Error!")
 else:
-    for i in range(n):
-        for j in range(n):
-            print(first[i][j] + second[i][j], end=" ")
-        print()
+    summa(first, second, n)
+
+# map применяет одну и ту же операцию ко всем элементам коллекции
+# split разделяет строку на подстроки по пробелам и возвращает их в виде массива
 
 #Задание 5
 
