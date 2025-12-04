@@ -57,6 +57,8 @@ print(f"{third}")
 
 def matrix(n):
     return [list(map(int, input().split())) for _ in range(n)]
+# map применяет одну и ту же операцию ко всем элементам коллекции
+# split разделяет строку на подстроки по пробелам и возвращает их в виде массива
 def summa(x, y, z):
     for i in range(n):
         for j in range(n):
@@ -69,9 +71,6 @@ if any(len(row) != n for row in first + second):
     print("Error!")
 else:
     summa(first, second, n)
-
-# map применяет одну и ту же операцию ко всем элементам коллекции
-# split разделяет строку на подстроки по пробелам и возвращает их в виде массива
 
 #Задание 5
 
