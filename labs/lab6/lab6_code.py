@@ -34,13 +34,13 @@ print(f"{third}")
 
 #Задание 3
 
-def prime(n):
-    if n < 2: return False
-    if n == 2: return True
-    if n % 2 == 0: return False
-    return all(n % i for i in range(3, int(n**0.5) + 1, 2))
+def prime(x):
+    if x < 2: return False
+    if x == 2: return True
+    if x % 2 == 0: return False
+    return all(x % i for i in range(3, int(x**0.5) + 1, 2))
 def primes(a, b):
-    p = [str(n) for n in range(a, b + 1) if prime(n)]
+    p = [str(x) for x in range(a, b + 1) if prime(x)]
     if not p: return "Error!"
     r = ""
     for i in p:
@@ -65,7 +65,6 @@ else:
         for j in range(n):
             print(first[i][j] + second[i][j], end=" ")
         print()
-
 
 #Задание 5
 
