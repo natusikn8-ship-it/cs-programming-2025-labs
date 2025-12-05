@@ -1,7 +1,7 @@
 #Задание 1
-
+# конвертация одних едениц времени в другие
+unit = {"h": 3600, "m": 60, "s": 1}
 def time(x, y, z):
-    unit = {"h": 3600, "m": 60, "s": 1}
     return x * unit[y] / unit[z]
 first = time(4, "h", "m")
 second = time(30, "m", "h")
@@ -11,7 +11,7 @@ print(f"{second}h")
 print(f"{third}h")
 
 #Задание 2
-
+# Расчёт процентов к сумме
 def calculate(x: int, y: int):
     if x < 30000:
         return 0
@@ -33,7 +33,7 @@ print(f"{second}")
 print(f"{third}")
 
 #Задание 3
-
+# Присок простых чисел в пррмежутке
 def prime(x):
     if x < 2: return False
     if x == 2: return True
@@ -54,7 +54,7 @@ print(f"{second}")
 print(f"{third}")
 
 #Задание 4
-
+# Сложение матриц
 def matrix(n):
     return [list(map(int, input().split())) for _ in range(n)]
 # map применяет одну и ту же операцию ко всем элементам коллекции
@@ -73,7 +73,7 @@ else:
     summa(first, second, n)
 
 #Задание 5
-
+# Палиндромы 
 def palindrome(text):
     symbols = " !?,.;:-_'\""
     list = {
