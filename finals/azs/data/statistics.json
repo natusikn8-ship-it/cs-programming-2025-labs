@@ -1,0 +1,22 @@
+{
+  "total_revenue": 7170.9,
+  "total_cars": 1,
+  "fuel_sales": {
+    "AI92": {
+      "liters": 0,
+      "revenue": 0
+    },
+    "AI95": {
+      "liters": 123.0,
+      "revenue": 7170.9
+    },
+    "AI98": {
+      "liters": 0,
+      "revenue": 0
+    },
+    "DT": {
+      "liters": 0,
+      "revenue": 0
+    }
+  }
+}
