@@ -1,0 +1,64 @@
+[
+  {
+    "number": 1,
+    "nozzles": {
+      "AI92": "AI92_1",
+      "AI95": "AI95_1"
+    }
+  },
+  {
+    "number": 2,
+    "nozzles": {
+      "AI92": "AI92_1",
+      "AI95": "AI95_1"
+    }
+  },
+  {
+    "number": 3,
+    "nozzles": {
+      "AI92": "AI92_1",
+      "AI95": "AI95_1",
+      "AI98": "AI98_1",
+      "DT": "DT_1"
+    }
+  },
+  {
+    "number": 4,
+    "nozzles": {
+      "AI92": "AI92_1",
+      "AI95": "AI95_1"
+    }
+  },
+  {
+    "number": 5,
+    "nozzles": {
+      "AI92": "AI92_1",
+      "AI95": "AI95_2",
+      "AI98": "AI98_1",
+      "DT": "DT_1"
+    }
+  },
+  {
+    "number": 6,
+    "nozzles": {
+      "AI92": "AI92_1",
+      "AI95": "AI95_2",
+      "AI98": "AI98_1",
+      "DT": "DT_1"
+    }
+  },
+  {
+    "number": 7,
+    "nozzles": {
+      "AI95": "AI95_2",
+      "DT": "DT_1"
+    }
+  },
+  {
+    "number": 8,
+    "nozzles": {
+      "AI95": "AI95_2",
+      "DT": "DT_1"
+    }
+  }
+]
