@@ -667,6 +667,16 @@ def main_game():
     print(f"Достигнутый этаж: {current_floor}")
 
 # Запуск игры
+if __name__ == "__main__": 
+    try:
+        main_game()
+    except KeyboardInterrupt: 
+        print("\n\nИгра прервана")
+    except Exception as e: 
+        print(f"Произошла ошибка: {e}")
+
+
+# Запуск игры
 if __name__ == "__main__": # При запуске игры напрямую
     try:
         main_game()
