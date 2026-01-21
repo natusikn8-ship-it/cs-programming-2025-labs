@@ -433,7 +433,7 @@ def rest_room(player):
             player.use_skill_points()
 
 def manage_inventory(player):
-    while True: # Бесконеный цикл меню
+    while True: 
         print("\nИНВЕНТАРЬ")
         print(f"Монеты: {player.coins}")
         print("Предметы:")
@@ -559,19 +559,22 @@ def manage_inventory(player):
                     print("\nВыберите действие")   
                     print("1. Снять оружие")
                     print("2. Снять броню")
-                    choice = input("Ваш выбор: ")
-                    if choice == 1:
-                        if not player.equipped["weapon"] == None:
-                            player.equipped["weapon"] == None
-                            player.attack -= 3
-                        else:
-                            print("ОШИБКА! У вас нет оружия, которое можно удалить")
-                    elif choice == 2:
-                        if not player.equipped["armor"] == None:
-                            player.equipped["armor"] == None
-                            player.defense -= 3                            
-                        else:
-                            print("ОШИБКА! У вас нет брони, которую можно удалить")
+                    try:
+                        ch = input("Ваш выбор: ")
+                        if ch == 1:
+                            if not player.equipped["weapon"] == None:
+                                player.equipped["weapon"] == None
+                                player.attack -= 3
+                            else:
+                                print("ОШИБКА! У вас нет оружия, которое можно удалить")
+                        elif ch == 2:
+                            if not player.equipped["armor"] == None:
+                                player.equipped["armor"] == None
+                                player.defense -= 3                            
+                            else:
+                                print("ОШИБКА! У вас нет брони, которую можно удалить")
+                    except ValueError:
+                        print("Введите число от 1 до 2")
                 else:
                     print("У вас нет предметов, которые можно снять")                                        
 
@@ -667,16 +670,6 @@ def main_game():
     print(f"Достигнутый этаж: {current_floor}")
 
 # Запуск игры
-if __name__ == "__main__": 
-    try:
-        main_game()
-    except KeyboardInterrupt: 
-        print("\n\nИгра прервана")
-    except Exception as e: 
-        print(f"Произошла ошибка: {e}")
-
-
-# Запуск игры
 if __name__ == "__main__": # При запуске игры напрямую
     try:
         main_game()
@@ -684,3 +677,4 @@ if __name__ == "__main__": # При запуске игры напрямую
         print("\n\nИгра прервана")
     except Exception as e: # Если произошла ошибка любого стандартного типа (деление на ноль, отсутствие файла, синтаксические ошибки и т.д)
         print(f"Произошла ошибка: {e}")
+
