@@ -588,7 +588,7 @@ def manage_inventory(player):
 
 def main_game():
     print("Загрузка игры...")
-    print("RPG. Добро пожаловать в подземелье!\n")
+    print("RPG. Добро пожаловать в подземелье!\n")Ы
     
     player = create_character()
     current_floor = 1
