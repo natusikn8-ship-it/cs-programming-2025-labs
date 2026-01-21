@@ -519,12 +519,16 @@ def manage_inventory(player):
                     
                 idx = int(input("Номер предмета: ")) - 1
                 if 0 <= idx < len(player.inventory):
-                    use = (input(f"Вы уверены, что хотите удалить {player.inventory.pop(idx).lower()}? (да/нет): ")).lower()
+                    use = (input(f"Вы уверены, что хотите удалить {player.inventory[idx].lower()}? (да/нет): ")).lower()
                     if use == "да":
                         removed = player.inventory.pop(idx) # удаление предмета
                         print(f"Выброшено: {removed}")
+                    elif use == "нет":
+                        continue
+                    else:
+                        print("ОШИБКА!")
                 else:
-                    print("Неверный номер")
+                    print("ОШИБКА! Такого предмета нет")
                     
             elif choice == 3:
                 if not player.inventory:
@@ -588,7 +592,7 @@ def manage_inventory(player):
 
 def main_game():
     print("Загрузка игры...")
-    print("RPG. Добро пожаловать в подземелье!\n")Ы
+    print("RPG. Добро пожаловать в подземелье!\n")
     
     player = create_character()
     current_floor = 1
