@@ -413,24 +413,33 @@ def treasure_room(player):
     
     print(f"Ваши монеты: {player.coins}")
 
+    use = input("Хотите открыть инвентарь? (да/нет): ").lower()
+    if use == "да":
+        manage_inventory(player)
+
+
 def rest_room(player):
     print("\nКОМНАТА ОТДЫХА")
     print("Здесь безопасно. Вы можете отдохнуть.")
-    
+       
     rest_amount = player.max_hp * 0.3
     player.heal(int(rest_amount))
     print(f"Вы восстановили {int(rest_amount)} HP")
 
     if player.coins > 100 and random.random() < 0.5:
         print(f"\nВы встретили торговца! Монет: {player.coins}")
-        use = input("Xотите подойти? (да/нет): ").lower()
+        use = input("Xотите подойти? (да/нет): ").lower()  # возвращает заглавные буквы к строчным
         if use == "да":
             player.use_coins()
     
     if player.skill_points > 0:
-        use = input("Хотите использовать очки прокачки? (да/нет): ").lower() # lower возвращает заглавные буквы к строчным
+        use = input("Хотите использовать очки прокачки? (да/нет): ").lower()
         if use == "да":
             player.use_skill_points()
+
+    use = input("Хотите открыть инвентарь? (да/нет): ").lower()
+    if use == "да":
+        manage_inventory(player)
 
 def manage_inventory(player):
     while True: 
@@ -452,7 +461,8 @@ def manage_inventory(player):
         print("2. Выбросить предмет")
         print("3. Экипировать предмет")
         print("4. Снять экиперованый предмет")
-        print("5. Выйти")
+        print("5. Показать характеристики")
+        print("6. Выйти")
         
         try:
             choice = int(input("Выберите действие: "))
@@ -583,6 +593,9 @@ def manage_inventory(player):
                     print("У вас нет предметов, которые можно снять")                                        
 
             elif choice == 5:
+                player.show_stats()
+
+            elif choice == 6:
                 break
             else:
                 print("ОШИБКА!")
@@ -614,13 +627,11 @@ def main_game():
         # Видимость комнат
         left_visible = random.choice([True, False])
         right_visible = random.choice([True, False])
-        
+
         print("\nПеред вами развилка:")
         print(f"1. Слева: {left_room['name'] if left_visible else '???'}")
         print(f"2. Справа: {right_room['name'] if right_visible else '???'}")
-        print("3. Открыть инвентарь")
-        print("4. Показать характеристики")
-        print("5. Выйти из игры")
+        print("3. Выйти из игры")
         
         try:
             choice = int(input("Куда пойти? "))
@@ -632,12 +643,6 @@ def main_game():
                 selected_room = right_room
                 print(f"\nВы идете направо...")
             elif choice == 3:
-                manage_inventory(player)
-                continue
-            elif choice == 4:
-                player.show_stats()
-                continue
-            elif choice == 5:
                 print("Спасибо за игру!")
                 break
             else:
