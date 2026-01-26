@@ -450,7 +450,7 @@ def manage_inventory(player):
         if not player.inventory:
             print("Инвентарь пуст")
         else:
-            for i, item in enumerate(player.inventory, 1): # enumerate выводит индекс перевд предметом
+            for i, item in enumerate(player.inventory, 1): 
                 print(f"{i}. {item}")
         
         print("\nЭкипировано:")
