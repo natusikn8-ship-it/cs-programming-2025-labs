@@ -428,7 +428,7 @@ def rest_room(player):
 
     if player.coins > 100 and random.random() < 0.5:
         print(f"\nВы встретили торговца! Монет: {player.coins}")
-        use = input("Xотите подойти? (да/нет): ").lower()  # возвращает заглавные буквы к строчным
+        use = input("Xотите подойти? (да/нет): ").lower()
         if use == "да":
             player.use_coins()
     
